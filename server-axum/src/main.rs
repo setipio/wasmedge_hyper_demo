@@ -12,7 +12,7 @@ async fn main() {
         .route("/echo", post(echo));
 
     // run it
-    let addr = "0.0.0.0:8080";
+    let addr = "0.0.0.0:7878";
     let tcp_listener = TcpListener::bind(addr).await.unwrap();
     println!("listening on {}", addr);
     axum::Server::from_tcp(tcp_listener.into_std().unwrap())
